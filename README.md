@@ -1,1 +1,1 @@
-# team-m-querying
+# jthemage-querying
