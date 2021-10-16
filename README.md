@@ -1,1 +1,1 @@
-# jthemage-querying
+# querying team-m
