@@ -1,6 +1,7 @@
 import requests
 
-def getRanking(params: dict, query: str):
+
+def get_ranking(params: dict, query: str):
     """
     Sends a GET request to Ranking and retrieves the ids of relevent documents.
     """
@@ -9,26 +10,22 @@ def getRanking(params: dict, query: str):
 
     #processed_query = process(params, query)
     #params = createRankingRequest(query)
-    
+
     #response = requests.get(f"http://{ranking_url}", params=params)
-    #return response.json 
+    # return response.json
 
     pass
 
-def getDocuments(document_ids: list):
+
+def get_documents(document_ids: list):
     """
     Sends a GET request to DDS and retrieves the relevent documents.
     """
 
     #dds_url = "TBA"
     #params = createDDSRequest(document_ids)
-    
+
     #response = requests.get(f"http://{dds_url}/", params=params)
-    #return response.json
+    # return response.json
 
     pass
-
-
-
-
-

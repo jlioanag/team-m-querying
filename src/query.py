@@ -6,6 +6,7 @@ from nltk.tokenize import word_tokenize
 
 spell = Speller()
 
+
 def remove_stop_words(query: str) -> str:
     stop_words = set(stopwords.words('english'))
 
