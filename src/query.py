@@ -10,19 +10,19 @@ spell = Speller()
 def remove_stop_words(query: str) -> str:
     stop_words = set(stopwords.words('english'))
 
-    return ''.join([word for word in word_tokenize(query) if word not in stop_words])
+    return ' '.join([word for word in word_tokenize(query) if word not in stop_words])
 
 
 def lemmatize_query(query: str) -> str:
     lemmatizer = WordNetLemmatizer()
 
-    return ''.join([lemmatizer.lemmatize(word) for word in word_tokenize(query)])
+    return ' '.join([lemmatizer.lemmatize(word) for word in word_tokenize(query)])
 
 
 def stem_query(query: str) -> str:
     stemmer = PorterStemmer()
 
-    return ''.join([stemmer.stem(word) for word in word_tokenize(query)])
+    return ' '.join([stemmer.stem(word) for word in word_tokenize(query)])
 
 
 def autocorrect(query: str) -> str:
@@ -32,5 +32,13 @@ def autocorrect(query: str) -> str:
 
 
 def create_query_result(results: list):
-
-    pass
+    if not results:
+        return 'No results.' 
+    
+    res = {
+        'query_display': results[0], 
+        'document_id':  results[1],
+        'qid':  results[2]
+    }
+    
+    return res
